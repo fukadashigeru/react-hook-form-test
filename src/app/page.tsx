@@ -21,6 +21,8 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { validationSchema } from "@/utils/validationSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "@/components/ui/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 
 interface LoginForm {
   username: string;
@@ -40,7 +42,14 @@ export default function Home() {
     },
   });
   const onSubmit = (data: LoginForm) => {
-    console.log(data);
+    toast({
+      title: "You submitted the following values:",
+      description: (
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        </pre>
+      ),
+    });
   };
   return (
     <>
@@ -52,6 +61,7 @@ export default function Home() {
         </div>
       </header>
       <main>
+        <Toaster />
         <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-lg py-6 sm:px-6 lg:px-8">
             <Card>
