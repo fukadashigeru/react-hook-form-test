@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 学習したこと
+`react-hook-form`と`validationSchema`と`zod`の使い方を学習した。
+
 ## Demo Video
 https://github.com/fukadashigeru/react-hook-form-test/assets/45095615/078b3b56-a5bc-4a89-b748-3903537eaddf
 
