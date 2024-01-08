@@ -120,7 +120,7 @@ export default function Home() {
                             <Input
                               id="email"
                               type="email"
-                              placeholder="hoeg@example.com"
+                              placeholder="foo@example.com"
                               {...field}
                             />
                           </FormControl>
